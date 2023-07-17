@@ -8,4 +8,14 @@ describe('<Button />', () => {
 
     expect(screen.getByRole('button', { name: /Button/i })).toBeInTheDocument();
   });
+
+  it('should render large Button', () => {
+    render(<Button size="lg">Button</Button>);
+
+    const largeButtonClasses =
+      'h-12 text-lg px-6 bg-secondary-100 rounded-md text-primary-300 font-bold hover:bg-secondary-200 active:bg-secondary-300 transition-colors';
+
+    expect(screen.getByRole('button', { name: /Button/i })).toBeInTheDocument();
+    expect(screen.getByRole('button')).toHaveClass(largeButtonClasses);
+  });
 });
