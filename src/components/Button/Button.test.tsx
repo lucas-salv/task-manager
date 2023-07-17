@@ -4,8 +4,8 @@ import { Button } from './';
 
 describe('<Button />', () => {
   it('should render Button component', () => {
-    render(<Button />);
+    render(<Button>Button</Button>);
 
-    expect(screen.getByRole('button')).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: /Button/i })).toBeInTheDocument();
   });
 });
