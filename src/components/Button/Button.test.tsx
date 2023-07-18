@@ -1,4 +1,5 @@
 import { screen, render } from '@testing-library/react';
+import { FaReact } from 'react-icons/fa';
 
 import { Button } from './';
 
@@ -17,5 +18,15 @@ describe('<Button />', () => {
 
     expect(screen.getByRole('button', { name: /Button/i })).toBeInTheDocument();
     expect(screen.getByRole('button')).toHaveClass(largeButtonClasses);
+  });
+
+  it('should render Button with an icon on the left side', () => {
+    render(<Button leftIcon={FaReact}>Button</Button>);
+    const leftIcon = screen
+      .getByRole('button', {
+        name: /Button/i
+      })
+      .querySelector('[data-leftIcon]');
+    expect(leftIcon).toBeInTheDocument();
   });
 });

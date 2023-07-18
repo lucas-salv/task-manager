@@ -21,7 +21,11 @@ export const Button = ({
     <button
       className={`${sizeVariants[size]} flex items-center gap-1.5 bg-secondary-100 rounded-md text-primary-300 font-bold hover:bg-secondary-200 active:bg-secondary-300 transition-colors`}
     >
-      {LeftIcon && <LeftIcon size={size === 'md' ? '16px' : '18px'} />}
+      {LeftIcon && (
+        <span data-leftIcon>
+          <LeftIcon size={size === 'md' ? '16px' : '18px'} />
+        </span>
+      )}
       {children}
     </button>
   );
