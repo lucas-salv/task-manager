@@ -20,7 +20,7 @@ describe('<Button />', () => {
     expect(screen.getByRole('button')).toHaveClass(largeButtonClasses);
   });
 
-  it('should render Button with an icon on the left side', () => {
+  it('should render Button with an icon on the left', () => {
     render(<Button leftIcon={FaReact}>Button</Button>);
     const leftIcon = screen
       .getByRole('button', {
@@ -28,5 +28,15 @@ describe('<Button />', () => {
       })
       .querySelector('[data-leftIcon]');
     expect(leftIcon).toBeInTheDocument();
+  });
+
+  it('should render Button with an icon on the right', () => {
+    render(<Button rightIcon={FaReact}>Button</Button>);
+    const rightIcon = screen
+      .getByRole('button', {
+        name: /Button/i
+      })
+      .querySelector('[data-rightIcon]');
+    expect(rightIcon).toBeInTheDocument();
   });
 });
