@@ -26,7 +26,7 @@ describe('<Button />', () => {
       .getByRole('button', {
         name: /Button/i
       })
-      .querySelector('[data-leftIcon]');
+      .querySelector('[data-left-icon]');
     expect(leftIcon).toBeInTheDocument();
   });
 
@@ -36,7 +36,7 @@ describe('<Button />', () => {
       .getByRole('button', {
         name: /Button/i
       })
-      .querySelector('[data-rightIcon]');
+      .querySelector('[data-right-icon]');
     expect(rightIcon).toBeInTheDocument();
   });
 });
