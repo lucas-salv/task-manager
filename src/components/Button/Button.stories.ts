@@ -10,6 +10,10 @@ const meta: Meta<typeof Button> = {
     leftIcon: {
       control: { type: 'boolean' },
       mapping: { false: '', true: FaReact }
+    },
+    rightIcon: {
+      control: { type: 'boolean' },
+      mapping: { false: '', true: FaReact }
     }
   }
 };
