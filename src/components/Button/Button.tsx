@@ -14,24 +14,26 @@ export const Button = ({
   leftIcon: LeftIcon,
   rightIcon: RightIcon
 }: ButtonProps) => {
-  const sizeVariants = {
+  const buttonSizeStyleVariants = {
     md: 'h-10 px-4',
     lg: 'h-12 text-lg px-6'
   };
 
+  const iconSizeVariants = size === 'md' ? '16px' : '18px';
+
   return (
     <button
-      className={`${sizeVariants[size]} flex items-center gap-1.5 bg-secondary-100 rounded-md text-primary-300 font-bold hover:bg-secondary-200 active:bg-secondary-300 transition-colors`}
+      className={`${buttonSizeStyleVariants[size]} flex items-center gap-1.5 bg-secondary-100 rounded-md text-primary-300 font-bold hover:bg-secondary-200 active:bg-secondary-300 transition-colors`}
     >
       {LeftIcon && (
         <span data-left-icon>
-          <LeftIcon size={size === 'md' ? '16px' : '18px'} />
+          <LeftIcon size={iconSizeVariants} />
         </span>
       )}
       {children}
       {RightIcon && (
         <span data-right-icon>
-          <RightIcon size={size === 'md' ? '16px' : '18px'} />
+          <RightIcon size={iconSizeVariants} />
         </span>
       )}
     </button>
