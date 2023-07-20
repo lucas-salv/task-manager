@@ -8,4 +8,11 @@ describe('<Input />', () => {
 
     expect(screen.getByRole('textbox')).toBeInTheDocument();
   });
+
+  it('should render Input with placeholder', () => {
+    const placeholderText = 'Digite seu email';
+    render(<Input placeholder={placeholderText} />);
+
+    expect(screen.getByPlaceholderText(placeholderText)).toBeInTheDocument();
+  });
 });
