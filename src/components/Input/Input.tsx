@@ -5,7 +5,7 @@ type InputProps = {} & InputHTMLAttributes<HTMLInputElement>;
 export const Input = ({ ...props }: InputProps) => {
   return (
     <input
-      className="border-0 text-base px-3 py-2 bg-primary-200 text-white rounded-md"
+      className="border-0 text-sm px-4 py-3 bg-primary-200 text-white font-bold rounded-md placeholder-textColor"
       {...props}
     />
   );
