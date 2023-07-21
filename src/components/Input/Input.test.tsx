@@ -4,7 +4,7 @@ import { Input } from './';
 
 describe('<Input />', () => {
   it('should render Input', () => {
-    render(<Input />);
+    render(<Input placeholder="placeholder" />);
 
     expect(screen.getByRole('textbox')).toBeInTheDocument();
   });

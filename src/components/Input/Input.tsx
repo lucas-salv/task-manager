@@ -1,12 +1,22 @@
 import { InputHTMLAttributes } from 'react';
 
-type InputProps = {} & InputHTMLAttributes<HTMLInputElement>;
+import { InputLabel } from './InputLabel/InputLabel';
 
-export const Input = ({ ...props }: InputProps) => {
+type InputProps = {
+  placeholder: string;
+  label?: string;
+} & InputHTMLAttributes<HTMLInputElement>;
+
+export const Input = ({ placeholder, label, ...props }: InputProps) => {
   return (
-    <input
-      className="border-0 text-sm px-4 py-3 bg-primary-200 text-white font-bold rounded-md placeholder-textColor"
-      {...props}
-    />
+    <>
+      {label && <InputLabel htmlFor={label}>{label}</InputLabel>}
+      <input
+        className="border-0 text-sm px-4 py-3 bg-primary-200 text-white font-bold rounded-md placeholder-textColor"
+        placeholder={placeholder}
+        id={label}
+        {...props}
+      />
+    </>
   );
 };

@@ -1,3 +1,10 @@
-export const InputLabel = () => {
-  return <label htmlFor="email">E-mail</label>;
+import { ReactNode } from 'react';
+
+type InputLabelProps = {
+  children: ReactNode;
+  htmlFor: string;
+};
+
+export const InputLabel = ({ children, htmlFor }: InputLabelProps) => {
+  return <label htmlFor={htmlFor}>{children}</label>;
 };
