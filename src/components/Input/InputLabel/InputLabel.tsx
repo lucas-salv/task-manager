@@ -6,5 +6,12 @@ type InputLabelProps = {
 };
 
 export const InputLabel = ({ children, htmlFor }: InputLabelProps) => {
-  return <label htmlFor={htmlFor}>{children}</label>;
+  return (
+    <label
+      className="block mb-2 font-bold text-xs text-textColor"
+      htmlFor={htmlFor}
+    >
+      {children}
+    </label>
+  );
 };

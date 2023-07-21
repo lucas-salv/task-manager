@@ -13,6 +13,13 @@ type Story = StoryObj<typeof Input>;
 
 export const Default: Story = {
   args: {
-    placeholder: 'Digite seu email'
+    placeholder: 'Digite seu nome'
+  }
+};
+
+export const WithLabel: Story = {
+  args: {
+    placeholder: 'Digite seu nome',
+    label: 'Nome:'
   }
 };
