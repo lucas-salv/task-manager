@@ -1,13 +1,22 @@
 import { InputHTMLAttributes } from 'react';
 
 import { InputLabel } from './InputLabel/InputLabel';
+import { InputError } from './InputError/InputError';
 
 type InputProps = {
   placeholder: string;
   label?: string;
+  error?: boolean;
+  errorMessage?: string;
 } & InputHTMLAttributes<HTMLInputElement>;
 
-export const Input = ({ placeholder, label, ...props }: InputProps) => {
+export const Input = ({
+  placeholder,
+  label,
+  error = false,
+  errorMessage = '',
+  ...props
+}: InputProps) => {
   return (
     <>
       {label && <InputLabel htmlFor={label}>{label}</InputLabel>}
@@ -17,6 +26,7 @@ export const Input = ({ placeholder, label, ...props }: InputProps) => {
         id={label}
         {...props}
       />
+      {error && <InputError errorMessage={errorMessage} />}
     </>
   );
 };
