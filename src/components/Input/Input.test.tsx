@@ -15,4 +15,19 @@ describe('<Input />', () => {
 
     expect(screen.getByPlaceholderText(placeholderText)).toBeInTheDocument();
   });
+
+  it('should render Input with error', () => {
+    render(<Input placeholder="error" error />);
+
+    const inputErrorClasses =
+      'border-error text-error placeholder-error placeholder-opacity-50';
+
+    expect(screen.getByPlaceholderText('error')).toHaveClass(inputErrorClasses);
+  });
+
+  it('should render Input with helperText', () => {
+    render(<Input placeholder="helperText" helperText="helper text" />);
+
+    expect(screen.getByText('helper text')).toBeInTheDocument();
+  });
 });
