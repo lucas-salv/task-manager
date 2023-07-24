@@ -1,20 +1,19 @@
 import { InputHTMLAttributes } from 'react';
 
 import { InputLabel } from './InputLabel/InputLabel';
-import { InputError } from './InputError/InputError';
 
 type InputProps = {
   placeholder: string;
   label?: string;
   error?: boolean;
-  errorMessage?: string;
+  helperText?: string;
 } & InputHTMLAttributes<HTMLInputElement>;
 
 export const Input = ({
   placeholder,
   label,
   error = false,
-  errorMessage = '',
+  helperText = '',
   ...props
 }: InputProps) => {
   const inputErrorStyle =
@@ -31,7 +30,9 @@ export const Input = ({
         id={label}
         {...props}
       />
-      {error && <InputError errorMessage={errorMessage} />}
+      {error && (
+        <p className="text-xs text-error font-bold mt-1">{helperText}</p>
+      )}
     </>
   );
 };

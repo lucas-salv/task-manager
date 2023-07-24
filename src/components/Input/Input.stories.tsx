@@ -15,8 +15,7 @@ export const Default: Story = {
   args: {
     placeholder: 'Digite seu nome',
     label: '',
-    error: false,
-    errorMessage: ''
+    error: false
   }
 };
 
