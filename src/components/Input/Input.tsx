@@ -14,6 +14,7 @@ export const Input = ({
   label,
   error = false,
   helperText = '',
+  disabled,
   ...props
 }: InputProps) => {
   const inputErrorStyle = error
@@ -21,6 +22,10 @@ export const Input = ({
     : 'border-transparent text-white placeholder-textColor';
 
   const helperTextErrorStyle = error ? 'text-error' : 'text-textColor';
+
+  const disabledStyle = disabled
+    ? 'disabled:opacity-50 cursor-not-allowed'
+    : '';
 
   return (
     <>
@@ -30,9 +35,10 @@ export const Input = ({
         </InputLabel>
       )}
       <input
-        className={`${inputErrorStyle} border-2 text-sm px-4 py-3 bg-primary-200 font-bold rounded-md`}
+        className={`${inputErrorStyle} ${disabledStyle} border-2 text-sm px-4 py-3 bg-primary-200 font-bold rounded-md`}
         placeholder={placeholder}
         id={label}
+        disabled={disabled}
         {...props}
       />
       {helperText && (
