@@ -15,13 +15,22 @@ export const Default: Story = {
   args: {
     placeholder: 'Digite seu e-mail',
     label: '',
-    error: true
+    error: false
   }
 };
 
-export const WithLabel: Story = {
+export const Label: Story = {
   args: {
     placeholder: 'Digite seu nome',
     label: 'Nome:'
+  }
+};
+
+export const Error: Story = {
+  args: {
+    placeholder: 'Digite seu e-mail',
+    label: 'E-mail',
+    error: true,
+    helperText: 'Algo deu errado!'
   }
 };
