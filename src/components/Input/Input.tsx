@@ -7,6 +7,7 @@ type InputProps = {
   label?: string;
   error?: boolean;
   helperText?: string;
+  fullWidth?: boolean;
 } & InputHTMLAttributes<HTMLInputElement>;
 
 export const Input = ({
@@ -15,6 +16,7 @@ export const Input = ({
   error = false,
   helperText = '',
   disabled,
+  fullWidth = false,
   ...props
 }: InputProps) => {
   const inputErrorStyle = error
@@ -23,9 +25,8 @@ export const Input = ({
 
   const helperTextErrorStyle = error ? 'text-error' : 'text-textColor';
 
-  const disabledStyle = disabled
-    ? 'disabled:opacity-50 cursor-not-allowed'
-    : '';
+  const disabledStyle = disabled && 'disabled:opacity-50 cursor-not-allowed';
+  const fullWidthStyle = fullWidth && 'flex w-full';
 
   return (
     <>
@@ -35,7 +36,7 @@ export const Input = ({
         </InputLabel>
       )}
       <input
-        className={`${inputErrorStyle} ${disabledStyle} border-2 text-sm px-4 py-3 bg-primary-200 font-bold rounded-md`}
+        className={`${inputErrorStyle} ${disabledStyle} ${fullWidthStyle} border-2 text-sm px-4 py-3 bg-primary-200 font-bold rounded-md`}
         placeholder={placeholder}
         id={label}
         disabled={disabled}
