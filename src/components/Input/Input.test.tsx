@@ -30,4 +30,18 @@ describe('<Input />', () => {
 
     expect(screen.getByText('helper text')).toBeInTheDocument();
   });
+
+  it('should render Input disabled', () => {
+    render(<Input placeholder="disabled" disabled />);
+    const input = screen.getByPlaceholderText('disabled');
+    input.focus();
+    expect(input).not.toHaveFocus();
+  });
+
+  it('should render Input full Width', () => {
+    render(<Input placeholder="full width" fullWidth />);
+    const input = screen.getByPlaceholderText('full width');
+    const fullWidthStyle = 'flex w-full';
+    expect(input).toHaveClass(fullWidthStyle);
+  });
 });
