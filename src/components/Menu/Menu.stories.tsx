@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
 
-import { Menu } from './';
+import { Menu, MenuItem } from './';
 
 const meta: Meta<typeof Menu> = {
   title: 'Components/Menu',
@@ -11,4 +11,10 @@ const meta: Meta<typeof Menu> = {
 export default meta;
 type Story = StoryObj<typeof Menu>;
 
-export const Default: Story = {};
+export const Default: Story = {
+  render: () => (
+    <Menu>
+      <MenuItem label="Item 1" />
+    </Menu>
+  )
+};
