@@ -25,9 +25,19 @@ export const Default: Story = {
 export const Icon: Story = {
   render: () => (
     <Menu>
+      <MenuItem label="Item 1" icon={MdTask} />
+      <MenuItem label="Item 2" icon={MdTask} />
+      <MenuItem label="Item 3" icon={MdTask} />
+    </Menu>
+  )
+};
+
+export const Active: Story = {
+  render: () => (
+    <Menu>
       <MenuItem label="Item 1" icon={MdTask} active />
-      <MenuItem label="Item 1" icon={MdTask} />
-      <MenuItem label="Item 1" icon={MdTask} />
+      <MenuItem label="Item 2" icon={MdTask} />
+      <MenuItem label="Item 3" icon={MdTask} />
     </Menu>
   )
 };
