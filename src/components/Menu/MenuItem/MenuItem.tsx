@@ -7,10 +7,10 @@ type MenuItemProps = {
 
 export const MenuItem = ({ label, icon: Icon }: MenuItemProps) => {
   return (
-    <li>
+    <li className="flex gap-2 text-base font-bold items-center">
       {Icon && (
         <span data-icon>
-          <Icon />
+          <Icon size="16px" />
         </span>
       )}
       {label}
