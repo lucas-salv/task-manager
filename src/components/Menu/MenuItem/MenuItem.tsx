@@ -7,13 +7,13 @@ type MenuItemProps = {
 
 export const MenuItem = ({ label, icon: Icon }: MenuItemProps) => {
   return (
-    <>
+    <li>
       {Icon && (
         <span data-icon>
           <Icon />
         </span>
       )}
-      <li>{label}</li>
-    </>
+      {label}
+    </li>
   );
 };
