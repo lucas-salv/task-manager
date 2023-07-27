@@ -1,4 +1,3 @@
-import { ReactNode } from 'react';
 import { IconType } from 'react-icons';
 
 type MenuItemProps = {
@@ -9,7 +8,11 @@ type MenuItemProps = {
 export const MenuItem = ({ label, icon: Icon }: MenuItemProps) => {
   return (
     <>
-      {Icon && <Icon />}
+      {Icon && (
+        <span data-icon>
+          <Icon />
+        </span>
+      )}
       <li>{label}</li>
     </>
   );
