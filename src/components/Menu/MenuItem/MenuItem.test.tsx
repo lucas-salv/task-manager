@@ -15,4 +15,16 @@ describe('<MenuItem />', () => {
 
     expect(icon).toBeInTheDocument();
   });
+
+  it('should render MenuItem when it is active', () => {
+    render(
+      <Menu>
+        <MenuItem label="item" active />
+      </Menu>
+    );
+
+    const menuActiveStyles = 'bg-secondary-100 text-primary-300';
+    const menuItem = screen.getByRole('list').querySelector('li');
+    expect(menuItem).toHaveClass(menuActiveStyles);
+  });
 });

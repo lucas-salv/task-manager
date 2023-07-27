@@ -14,7 +14,7 @@ export const MenuItem = ({ label, icon: Icon, active }: MenuItemProps) => {
 
   return (
     <li
-      className={`${activeStyles} flex gap-2 px-4 h-10 rounded-md text-base font-bold items-center`}
+      className={`${activeStyles} flex gap-2 px-4 h-10 rounded-md text-base font-bold items-center cursor-pointer`}
     >
       {Icon && (
         <span data-icon>
