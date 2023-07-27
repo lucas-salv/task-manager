@@ -15,7 +15,7 @@ type Story = StoryObj<typeof Menu>;
 export const Default: Story = {
   render: () => (
     <Menu>
-      <MenuItem label="Item 1" />
+      <MenuItem label="Item 1" active />
       <MenuItem label="Item 2" />
       <MenuItem label="Item 3" />
     </Menu>
@@ -25,7 +25,7 @@ export const Default: Story = {
 export const Icon: Story = {
   render: () => (
     <Menu>
-      <MenuItem label="Item 1" icon={MdTask} />
+      <MenuItem label="Item 1" icon={MdTask} active />
       <MenuItem label="Item 1" icon={MdTask} />
       <MenuItem label="Item 1" icon={MdTask} />
     </Menu>

@@ -5,5 +5,5 @@ type MenuProps = {
 };
 
 export const Menu = ({ children }: MenuProps) => {
-  return <ul className="flex flex-col">{children}</ul>;
+  return <ul className="flex flex-col gap-2 w-52">{children}</ul>;
 };
