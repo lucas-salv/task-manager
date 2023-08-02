@@ -12,5 +12,8 @@ export default meta;
 type Story = StoryObj<typeof Switch>;
 
 export const Default: Story = {
-  render: () => <Switch />
+  args: {
+    asChild: false,
+    checked: false
+  }
 };
