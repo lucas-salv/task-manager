@@ -2,4 +2,9 @@ import { screen, render } from '@testing-library/react';
 
 import { Switch } from './';
 
-describe('<Switch />', () => {});
+describe('<Switch />', () => {
+  it('should render Switch', () => {
+    render(<Switch />);
+    expect(screen.getByRole('switch')).toBeInTheDocument();
+  });
+});
