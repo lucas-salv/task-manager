@@ -1,3 +1,10 @@
 import { screen, render } from '@testing-library/react';
 
-describe('<TextEditable />', () => {});
+import { TextEditable } from './';
+
+describe('<TextEditable />', () => {
+  it('should render TextEditable', () => {
+    render(<TextEditable>Text Editable</TextEditable>);
+    expect(screen.getByText('Text Editable')).toBeInTheDocument();
+  });
+});
