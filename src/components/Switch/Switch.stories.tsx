@@ -14,6 +14,7 @@ type Story = StoryObj<typeof Switch>;
 export const Default: Story = {
   args: {
     asChild: false,
-    checked: false
+    checked: false,
+    disabled: false
   }
 };
