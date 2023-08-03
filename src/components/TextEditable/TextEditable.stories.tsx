@@ -13,6 +13,6 @@ type Story = StoryObj<typeof TextEditable>;
 
 export const Default: Story = {
   args: {
-    children: 'Paragraph'
+    label: 'Paragraph'
   }
 };
