@@ -22,11 +22,12 @@ export const TextEditable = ({
     handleKeydown,
     handleEditText,
     handleInput,
+    getAsStyle,
     isContentEditable
   } = useTextEditable(text, onValueConfirm, onValueChange);
 
   return (
-    <As className="group flex items-center gap-2">
+    <As className={`group ${getAsStyle(as)} flex items-center gap-2`}>
       <span
         ref={text}
         onBlur={handleFocusOut}
@@ -39,10 +40,10 @@ export const TextEditable = ({
       </span>
       {!isContentEditable ? (
         <button
-          className="hidden px-1 group-hover:block"
+          className="hidden px-1 group-hover:flex justify-center"
           onClick={handleEditText}
         >
-          <RiEdit2Fill />
+          <RiEdit2Fill size={20} />
         </button>
       ) : (
         <span className="px-1 bg-primary-200 text-xs">Enter</span>
@@ -50,5 +51,3 @@ export const TextEditable = ({
     </As>
   );
 };
-
-// TODO: mover o onValueChange para dentro do custom hook do componente e criar estilos diferentes para cada valor da prop 'as'
