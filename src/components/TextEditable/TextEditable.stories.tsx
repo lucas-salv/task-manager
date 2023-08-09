@@ -13,6 +13,21 @@ type Story = StoryObj<typeof TextEditable>;
 
 export const Default: Story = {
   args: {
-    label: 'Paragraph'
+    value: 'Paragraph'
   }
+};
+
+export const OnValueChange: Story = {
+  render: () => (
+    <TextEditable value="Teste" onValueChange={(value) => console.log(value)} />
+  )
+};
+
+export const OnValueConfirm: Story = {
+  render: () => (
+    <TextEditable
+      value="On Value Confirm"
+      onValueConfirm={(value) => console.log(value)}
+    />
+  )
 };

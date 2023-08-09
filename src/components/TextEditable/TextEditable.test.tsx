@@ -4,7 +4,7 @@ import { TextEditable } from './';
 
 describe('<TextEditable />', () => {
   it('should render TextEditable', () => {
-    render(<TextEditable>Text Editable</TextEditable>);
+    render(<TextEditable value="Text Editable" />);
     expect(screen.getByText('Text Editable')).toBeInTheDocument();
   });
 });
