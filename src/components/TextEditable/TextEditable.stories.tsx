@@ -17,9 +17,26 @@ export const Default: Story = {
   }
 };
 
+export const As: Story = {
+  render: () => (
+    <>
+      <TextEditable as="h1" value="Text Editable h1" />
+      <TextEditable as="h2" value="Text Editable h2" />
+      <TextEditable as="h3" value="Text Editable h3" />
+      <TextEditable as="h4" value="Text Editable h4" />
+      <TextEditable as="h5" value="Text Editable h5" />
+      <TextEditable as="h6" value="Text Editable h6" />
+      <TextEditable as="p" value="Text Editable p" />
+    </>
+  )
+};
+
 export const OnValueChange: Story = {
   render: () => (
-    <TextEditable value="Teste" onValueChange={(value) => console.log(value)} />
+    <TextEditable
+      value="On Value Change"
+      onValueChange={(value) => console.log(value)}
+    />
   )
 };
 
