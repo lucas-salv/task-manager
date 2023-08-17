@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import { RiEdit2Fill } from 'react-icons/ri';
-import useTextEditable from './useTextEditable';
+import useTextEditable from './hooks/useTextEditable';
 
 type TextEditableProps = {
   as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p';
