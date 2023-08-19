@@ -11,9 +11,12 @@ type CheckboxProps = {
   value?: string;
 };
 
-export const Checkbox = ({}: CheckboxProps) => {
+export const Checkbox = ({ ...props }: CheckboxProps) => {
   return (
-    <C.Root className="flex items-center justify-center w-5 h-5 bg-primary-100 rounded focus:bg-primary-200">
+    <C.Root
+      {...props}
+      className="flex items-center justify-center w-5 h-5 bg-primary-100 rounded focus:bg-primary-200"
+    >
       <C.Indicator className="text-white">
         <BsCheck />
       </C.Indicator>
