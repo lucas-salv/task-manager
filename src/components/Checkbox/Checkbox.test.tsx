@@ -7,4 +7,9 @@ describe('<Checkbox />', () => {
     render(<Checkbox />);
     expect(screen.getByRole('checkbox')).toBeInTheDocument();
   });
+
+  it('should render Checkbox disabled', () => {
+    render(<Checkbox disabled />);
+    expect(screen.getByRole('checkbox')).toBeDisabled();
+  });
 });
