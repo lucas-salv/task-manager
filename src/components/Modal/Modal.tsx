@@ -1,13 +1,15 @@
 import * as M from '@radix-ui/react-dialog';
 
-import { Button } from '../Button';
+import { ReactNode } from 'react';
 
-export const Modal = () => {
+type ModalProps = {
+  children?: ReactNode;
+};
+
+export const Modal = ({ children }: ModalProps) => {
   return (
     <M.Root>
-      <M.Trigger>
-        <Button>Open Modal</Button>
-      </M.Trigger>
+      {children}
       <M.Portal>
         <M.Overlay className="bg-black fixed inset-0 bg-opacity-50 backdrop-blur-sm  transition-opacity" />
         <M.Content className="w-3/4 max-w-md max-h-screen p-7 bg-primary-200 rounded-md fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 focus:outline-none">
