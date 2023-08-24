@@ -3,7 +3,7 @@ import { screen, render } from '@testing-library/react';
 import { Modal, ModalContent, ModalTitle } from './../';
 
 describe('<ModalTitle />', () => {
-  it('should render ModalTitle inside ModalContent', () => {
+  it('should render ModalTitle inside ModalContent when open', () => {
     render(
       <Modal defaultOpen={true}>
         <ModalContent>
