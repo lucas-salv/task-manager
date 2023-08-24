@@ -5,7 +5,7 @@ import { Modal, ModalContent } from './../';
 describe('<ModalContent />', () => {
   it('should render ModalContent inside Modal', () => {
     render(
-      <Modal>
+      <Modal defaultOpen={true}>
         <ModalContent>Content</ModalContent>
       </Modal>
     );
