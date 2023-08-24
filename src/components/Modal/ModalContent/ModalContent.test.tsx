@@ -12,4 +12,13 @@ describe('<ModalContent />', () => {
 
     expect(screen.getByText('Content')).toBeInTheDocument();
   });
+  it('should not render ModalContent when open prop is false', () => {
+    render(
+      <Modal defaultOpen={false}>
+        <ModalContent>Content</ModalContent>
+      </Modal>
+    );
+
+    expect(screen.queryByText('Content')).not.toBeInTheDocument();
+  });
 });
