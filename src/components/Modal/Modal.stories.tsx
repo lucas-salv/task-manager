@@ -5,9 +5,11 @@ import {
   ModalTrigger,
   ModalContent,
   ModalTitle,
-  ModalDescription
+  ModalDescription,
+  ModalClose
 } from './';
 import { Button } from '../Button';
+import { IoClose } from 'react-icons/io5';
 
 const meta: Meta<typeof Modal> = {
   title: 'Components/Modal',
@@ -27,6 +29,9 @@ export const Default: Story = {
       <ModalContent>
         <ModalTitle>Title</ModalTitle>
         <ModalDescription>Lorem ipsum dolor et</ModalDescription>
+        <ModalClose>
+          <IoClose />
+        </ModalClose>
       </ModalContent>
     </Modal>
   )
