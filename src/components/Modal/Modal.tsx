@@ -11,5 +11,3 @@ type ModalProps = {
 export const Modal = ({ children, ...props }: ModalProps) => {
   return <M.Root {...props}>{children}</M.Root>;
 };
-
-//TODO: adicionar o subcomponent Close do radix/dialog
