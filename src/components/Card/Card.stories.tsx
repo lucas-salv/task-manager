@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { Card } from './';
+import { Card, CardTitle, CardContent } from './';
 
 const meta: Meta<typeof Card> = {
   title: 'Components/Card',
@@ -11,4 +11,11 @@ const meta: Meta<typeof Card> = {
 export default meta;
 type Story = StoryObj<typeof Card>;
 
-export const Default: Story = {};
+export const Default: Story = {
+  render: () => (
+    <Card>
+      <CardTitle>Título</CardTitle>
+      <CardContent>Lorem ipsum dolor</CardContent>
+    </Card>
+  )
+};
