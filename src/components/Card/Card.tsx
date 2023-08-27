@@ -5,5 +5,9 @@ type CardProps = {
 } & HTMLAttributes<HTMLDivElement>;
 
 export const Card = ({ children }: CardProps) => {
-  return <div>{children}</div>;
+  return (
+    <div className="inline-flex flex-col max-w-sm bg-primary-200 p-7 rounded-md">
+      {children}
+    </div>
+  );
 };

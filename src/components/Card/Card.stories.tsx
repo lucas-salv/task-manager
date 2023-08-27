@@ -15,7 +15,10 @@ export const Default: Story = {
   render: () => (
     <Card>
       <CardTitle>Título</CardTitle>
-      <CardContent>Lorem ipsum dolor</CardContent>
+      <CardContent>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec varius
+        feugiat ligula nec faucibus.
+      </CardContent>
     </Card>
   )
 };

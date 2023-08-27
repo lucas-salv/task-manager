@@ -5,5 +5,9 @@ type CardContentProps = {
 } & HTMLAttributes<HTMLDivElement>;
 
 export const CardContent = ({ children, ...props }: CardContentProps) => {
-  return <div {...props}>{children}</div>;
+  return (
+    <div {...props} className="text-textColor mt-2">
+      {children}
+    </div>
+  );
 };
