@@ -13,6 +13,7 @@
 /out/
 /.swc
 /.vscode
+.prettierrc
 
 # production
 /build
